@@ -17,7 +17,7 @@ const features = [
   {
     icon: Gamepad2,
     title: 'VR & JEUX VIDEO',
-    description: 'J\'ai une passion pour la réalité virtuelle et les jeux vidéo, pour l\'expression créative et les expériences immersives qu\'ils offrent'
+    description: 'La plus pure expression de "créer en s\'amusant"'
   }
 ];
 
