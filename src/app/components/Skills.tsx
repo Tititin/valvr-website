@@ -82,7 +82,6 @@ export function Skills() {
                         textAnchor: 'middle',
                         dominantBaseline: 'central'
                       }}
-                      angle={-90}
                       tickFormatter={(value) => value.length > 10 ? `${value.substring(0, 10)}...` : value}
                     />
                     <PolarRadiusAxis
