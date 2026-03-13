@@ -19,7 +19,7 @@ const skillCategories = [
     category: 'SOFTWARE',
     skills: [
       { name: 'C++', level: 80 },
-      { name: 'C#/.NET', level: 60 },
+      { name: 'C#/.NET', level: 48 },
       { name: 'Visual Studio', level: 80 }
     ]
   },
