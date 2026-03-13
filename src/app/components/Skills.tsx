@@ -12,7 +12,7 @@ const skillCategories = [
       { name: 'AzureDevOps', level: 80 },
       { name: 'Azure Pipelines', level: 40 },
       { name: 'Github Actions', level: 70 },
-      { name: 'Terraform/IaC', level: 60 }
+      { name: 'Terraform', level: 60 }
     ]
   },
   {
@@ -28,8 +28,9 @@ const skillCategories = [
     skills: [
       { name: 'Unreal Engine', level: 70 },
       { name: 'SFML', level: 85 },
+      { name: 'WebGL', level: 20 },
       { name: 'Unity3D', level: 55 },
-      { name: 'WebGL/OpenGL', level: 20 }
+      { name: 'OpenGL', level: 20 }
     ]
   }
 ];
