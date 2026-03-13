@@ -63,34 +63,21 @@ export function About() {
           ))}
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
-          <div className="md:w-2/3">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-center md:text-left"
-            >
-              <p className="text-lg" style={{ color: 'rgba(0, 217, 255, 0.8)' }}>
-                Ingénieur DevOps de métier, programmeur passionné et joueur invétéré, c'est en m'amusant que je déploie tout mon potentiel créatif.
-                Nantais et fier de l'être, j'ai du Petit Beurre dans les veines et les bords de l'Erdre dans le coeur.
-              </p>
-              <p className="text-lg" style={{ color: 'rgba(0, 217, 255, 0.8)' }}>
-                Mon approche combine code propre, design innovant et une compréhension profonde
-                de l'expérience utilisateur pour livrer des solutions qui ne sont pas seulement fonctionnelles—elles sont exceptionnelles.
-              </p>
-            </motion.div>
-          </div>
-
-          <div className="md:w-1/3 flex justify-center">
-            <img
-              src="/petitbeurre.png"
-              alt="Petit Beurre"
-              className="w-40 h-40 object-contain rounded-xl border border-cyan-300/50 shadow-[0_0_25px_rgba(0,255,255,0.35)] transition-transform duration-300 hover:-translate-y-1 hover:scale-105"
-            />
-          </div>
-        </div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="max-w-3xl mx-auto text-center"
+        >
+          <p className="text-lg mb-6" style={{ color: 'rgba(0, 217, 255, 0.8)' }}>
+            Ingénieur DevOps de métier, programmeur passionné et joueur invétéré, c'est en m'amusant que je déploie tout mon potentiel créatif.
+            Nantais et fier de l'être, j'ai du Petit Beurre dans les veines et les bords de l'Erdre dans le coeur.
+          </p>
+          <p className="text-lg" style={{ color: 'rgba(0, 217, 255, 0.8)' }}>
+            Mon approche combine code propre, design innovant et une compréhension profonde
+            de l'expérience utilisateur pour livrer des solutions qui ne sont pas seulement fonctionnelles—elles sont exceptionnelles.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
