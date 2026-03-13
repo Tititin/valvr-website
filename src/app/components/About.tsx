@@ -1,11 +1,11 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Code2, Cpu, Zap } from 'lucide-react';
+import { Cpu, Zap, Gamepad2 } from 'lucide-react';
 
 const features = [
   {
-    icon: Code2,
+    icon: Gamepad2,
     title: 'VR DEVELOPMENT',
     description: 'Spécialiste en réalité virtuelle et expériences immersives'
   },
