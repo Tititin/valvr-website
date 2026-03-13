@@ -77,9 +77,13 @@ export function Skills() {
                       dataKey="name"
                       tick={{
                         fill: 'rgb(0, 255, 255)',
-                        fontSize: 12,
-                        fontFamily: 'Rajdhani, sans-serif'
+                        fontSize: 10,
+                        fontFamily: 'Rajdhani, sans-serif',
+                        textAnchor: 'middle',
+                        dominantBaseline: 'central'
                       }}
+                      angle={-90}
+                      tickFormatter={(value) => value.length > 10 ? `${value.substring(0, 10)}...` : value}
                     />
                     <PolarRadiusAxis
                       angle={90}
