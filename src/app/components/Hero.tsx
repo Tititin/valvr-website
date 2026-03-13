@@ -48,7 +48,7 @@ export function Hero() {
             className="text-base md:text-lg max-w-2xl mx-auto mb-12"
             style={{ color: 'rgba(0, 217, 255, 0.7)' }}
           >
-            Créant des expériences immersives, une ligne de code à la fois
+            Créer en s'amusant, qu'est-ce que c'est passionnant !
           </motion.p>
 
           {/* Decorative line */}
