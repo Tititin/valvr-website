@@ -10,8 +10,15 @@ const AnimatedTick = (props: any) => {
   const isLong = text.length > 12;
   const displayText = isLong ? text + '   ' + text + '   ' + text : text; // Répéter 3 fois pour la boucle
 
+  const clipId = `clip-${text.replace(/\s+/g, '-')}`;
+
   return (
     <g>
+      <defs>
+        <clipPath id={clipId}>
+          <rect x={x - 50} y={y - 10} width={100} height={20} />
+        </clipPath>
+      </defs>
       <text
         x={x}
         y={y}
@@ -20,6 +27,7 @@ const AnimatedTick = (props: any) => {
         fill="rgb(0, 255, 255)"
         fontSize={12}
         fontFamily="Rajdhani, sans-serif"
+        clipPath={`url(#${clipId})`}
       >
         {displayText}
         {isLong && (
