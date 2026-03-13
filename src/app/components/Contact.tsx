@@ -1,12 +1,12 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitch } from 'lucide-react';
 
 const socialLinks = [
   {
     icon: Github,
-    href: 'https://github.com',
+    href: 'https://github.com/Tititin',
     label: 'GitHub'
   },
   {
@@ -15,13 +15,13 @@ const socialLinks = [
     label: 'LinkedIn'
   },
   {
-    icon: Twitter,
-    href: 'https://twitter.com',
-    label: 'Twitter'
+    icon: Twitch,
+    href: 'https://twitch.tv/valvr44',
+    label: 'Twitch'
   },
   {
     icon: Mail,
-    href: 'mailto:contact@valvr.com',
+    href: 'mailto:valvrpro@gmail.com',
     label: 'Email'
   }
 ];
@@ -91,7 +91,7 @@ export function Contact() {
           className="text-center"
         >
           <a
-            href="mailto:contact@valvr.com"
+            href="mailto:valvrpro@gmail.com"
             className="tron-button text-xl tracking-wider inline-block"
           >
             ENVOYER UN MESSAGE
@@ -106,7 +106,7 @@ export function Contact() {
         >
           <div className="neon-line max-w-md mx-auto mb-6" />
           <p style={{ color: 'rgba(0, 217, 255, 0.5)' }}>
-            © 2026 Val'VR. Tous droits réservés.
+            © 2026 Val'VR. Tous droits réservés. Version du site : v0.1.0
           </p>
         </motion.div>
       </div>
