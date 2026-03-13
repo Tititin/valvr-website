@@ -32,7 +32,7 @@ const AnimatedTick = (props: any) => {
       <style>
         {`
           @keyframes scrollText {
-            0% { transform: translateX(0); }
+            0% { transform: translateX(50px); }
             100% { transform: translateX(-50px); }
           }
         `}
