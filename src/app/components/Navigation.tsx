@@ -56,7 +56,7 @@ export function Navigation() {
               whileHover={{ scale: 1.05 }}
               onClick={() => scrollToSection('#')}
             >
-              JD
+              Val'VR
             </motion.div>
 
             {/* Desktop Navigation */}
