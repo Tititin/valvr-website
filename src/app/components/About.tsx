@@ -1,16 +1,16 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Cpu, Zap, Gamepad2 } from 'lucide-react';
+import { Workflow, Monitor, Gamepad2 } from 'lucide-react';
 
 const features = [
   {
-    icon: Cpu,
+    icon: Workflow,
     title: 'DEVOPS',
     description: 'Expertise en intégration continue, déploiement et gestion d\'infrastructure cloud'
   },
   {
-    icon: Zap,
+    icon: Monitor,
     title: 'SOFTWARE',
     description: 'Programmation orientée objet, Qt, C++ et C#'
   },
