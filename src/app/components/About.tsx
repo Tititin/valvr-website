@@ -35,7 +35,7 @@ export function About() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-4 neon-text tracking-wider">
-            À PROPOS
+            À PROPOS (WIP)
           </h2>
           <div className="neon-line max-w-xs mx-auto" />
         </motion.div>
