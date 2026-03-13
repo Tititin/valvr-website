@@ -38,7 +38,7 @@ export function Hero() {
             className="text-xl md:text-2xl lg:text-3xl mb-4"
             style={{ color: 'var(--tron-cyan)' }}
           >
-            DÉVELOPPEUR VR
+            INGENIEUR DEVOPS, LOGICIEL & VR
           </motion.div>
 
           <motion.p
