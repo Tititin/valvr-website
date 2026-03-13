@@ -5,30 +5,31 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 
 const skillCategories = [
   {
+    category: 'DEVOPS',
+    skills: [
+      { name: 'Github', level: 80 },
+      { name: 'CI/CD', level: 75 },
+      { name: 'AzureDevOps', level: 80 },
+      { name: 'Azure Pipelines', level: 40 },
+      { name: 'Github Actions', level: 70 },
+      { name: 'Terraform/IaC', level: 60 }
+    ]
+  },
+  {
+    category: 'SOFTWARE',
+    skills: [
+      { name: 'C++', level: 80 },
+      { name: 'C#/.NET', level: 60 },
+      { name: 'Visual Studio', level: 80 }
+    ]
+  },
+  {
     category: 'VR/3D',
     skills: [
-      { name: 'Three.js', level: 95 },
-      { name: 'WebXR', level: 90 },
-      { name: 'A-Frame', level: 85 },
-      { name: 'Babylon.js', level: 80 }
-    ]
-  },
-  {
-    category: 'FRONTEND',
-    skills: [
-      { name: 'React', level: 90 },
-      { name: 'TypeScript', level: 88 },
-      { name: 'Vue.js', level: 85 },
-      { name: 'Tailwind', level: 92 }
-    ]
-  },
-  {
-    category: 'OUTILS',
-    skills: [
-      { name: 'Git', level: 93 },
-      { name: 'Node.js', level: 90 },
-      { name: 'Vite', level: 87 },
-      { name: 'Docker', level: 82 }
+      { name: 'Unreal Engine', level: 70 },
+      { name: 'SFML', level: 85 },
+      { name: 'Unity3D', level: 55 },
+      { name: 'WebGL/OpenGL', level: 20 }
     ]
   }
 ];
