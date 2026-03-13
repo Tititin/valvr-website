@@ -11,7 +11,7 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/valentin-rouquet-vr-engineer/',
     label: 'LinkedIn'
   },
   {
