@@ -5,19 +5,19 @@ import { Cpu, Zap, Gamepad2 } from 'lucide-react';
 
 const features = [
   {
-    icon: Gamepad2,
-    title: 'VR DEVELOPMENT',
-    description: 'Spécialiste en réalité virtuelle et expériences immersives'
-  },
-  {
     icon: Cpu,
-    title: 'WEB TECH',
-    description: 'Expert en technologies web modernes et frameworks'
+    title: 'DEVOPS',
+    description: 'Expertise en intégration continue, déploiement et gestion d\'infrastructure cloud'
   },
   {
     icon: Zap,
-    title: 'PERFORMANCE',
-    description: 'Solutions optimisées pour une expérience fluide'
+    title: 'SOFTWARE',
+    description: 'Programmation orientée objet, Qt, C++ et C#'
+  },
+  {
+    icon: Gamepad2,
+    title: 'VR & JEUX VIDEO',
+    description: 'J\'ai une passion pour la réalité virtuelle et les jeux vidéo, pour l\'expression créative et les expériences immersives qu\'ils offrent'
   }
 ];
 
