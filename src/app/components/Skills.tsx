@@ -7,13 +7,11 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 const AnimatedTick = (props: any) => {
   const { payload, x, y, textAnchor, dominantBaseline } = props;
   const text = payload.value;
-  const displayText = text.length > 12 ? text + '   ' + text : text; // Ajouter espace pour le défilement
+  const isLong = text.length > 12;
+  const displayText = isLong ? text + '   ' + text + '   ' + text : text; // Répéter 3 fois pour la boucle
 
   return (
     <g>
-      <defs>
-        <path id={`path-${text}`} d={`M${x},${y} L${x + 50},${y}`} />
-      </defs>
       <text
         x={x}
         y={y}
@@ -22,21 +20,18 @@ const AnimatedTick = (props: any) => {
         fill="rgb(0, 255, 255)"
         fontSize={12}
         fontFamily="Rajdhani, sans-serif"
-        className="animated-text"
-        style={{
-          animation: text.length > 12 ? 'scrollText 3s linear infinite' : 'none'
-        }}
       >
         {displayText}
+        {isLong && (
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="0,0;-100,0"
+            dur="4s"
+            repeatCount="indefinite"
+          />
+        )}
       </text>
-      <style>
-        {`
-          @keyframes scrollText {
-            0% { transform: translateX(50px); }
-            100% { transform: translateX(-50px); }
-          }
-        `}
-      </style>
     </g>
   );
 };
