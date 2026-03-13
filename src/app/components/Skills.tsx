@@ -3,6 +3,44 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
+// Composant personnalisé pour les ticks avec animation de défilement
+const AnimatedTick = (props: any) => {
+  const { payload, x, y, textAnchor, dominantBaseline } = props;
+  const text = payload.value;
+  const displayText = text.length > 12 ? text + '   ' + text : text; // Ajouter espace pour le défilement
+
+  return (
+    <g>
+      <defs>
+        <path id={`path-${text}`} d={`M${x},${y} L${x + 50},${y}`} />
+      </defs>
+      <text
+        x={x}
+        y={y}
+        textAnchor={textAnchor}
+        dominantBaseline={dominantBaseline}
+        fill="rgb(0, 255, 255)"
+        fontSize={12}
+        fontFamily="Rajdhani, sans-serif"
+        className="animated-text"
+        style={{
+          animation: text.length > 12 ? 'scrollText 3s linear infinite' : 'none'
+        }}
+      >
+        {displayText}
+      </text>
+      <style>
+        {`
+          @keyframes scrollText {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50px); }
+          }
+        `}
+      </style>
+    </g>
+  );
+};
+
 const skillCategories = [
   {
     category: 'DEVOPS',
@@ -75,14 +113,8 @@ export function Skills() {
                     />
                     <PolarAngleAxis
                       dataKey="name"
-                      tick={{
-                        fill: 'rgb(0, 255, 255)',
-                        fontSize: 10,
-                        fontFamily: 'Rajdhani, sans-serif',
-                        textAnchor: 'middle',
-                        dominantBaseline: 'central'
-                      }}
-                      tickFormatter={(value) => value.length > 10 ? `${value.substring(0, 10)}...` : value}
+                      tick={<AnimatedTick />}
+                      tickFormatter={(value) => value.length > 12 ? value.substring(0, 12) + '...' : value}
                     />
                     <PolarRadiusAxis
                       angle={90}
