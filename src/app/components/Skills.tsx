@@ -3,47 +3,6 @@ import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 
-// Composant personnalisé pour les ticks avec animation de défilement
-const AnimatedTick = (props: any) => {
-  const { payload, x, y, textAnchor, dominantBaseline } = props;
-  const text = payload.value;
-  const isLong = text.length > 12;
-  const displayText = isLong ? text + '   ' + text + '   ' + text : text; // Répéter 3 fois pour la boucle
-
-  const clipId = `clip-${text.replace(/\s+/g, '-')}`;
-
-  return (
-    <g>
-      <defs>
-        <clipPath id={clipId}>
-          <rect x={x - 50} y={y - 10} width={100} height={20} />
-        </clipPath>
-      </defs>
-      <text
-        x={isLong ? x + 50 : x} // Positionner à droite pour les longs textes
-        y={y}
-        textAnchor={textAnchor}
-        dominantBaseline={dominantBaseline}
-        fill="rgb(0, 255, 255)"
-        fontSize={12}
-        fontFamily="Rajdhani, sans-serif"
-        clipPath={isLong ? `url(#${clipId})` : undefined}
-      >
-        {displayText}
-        {isLong && (
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            values="0,0;-100,0"
-            dur="4s"
-            repeatCount="indefinite"
-          />
-        )}
-      </text>
-    </g>
-  );
-};
-
 const skillCategories = [
   {
     category: 'DEVOPS',
@@ -116,8 +75,12 @@ export function Skills() {
                     />
                     <PolarAngleAxis
                       dataKey="name"
-                      tick={<AnimatedTick />}
-                      tickFormatter={(value) => value.length > 12 ? value.substring(0, 12) + '...' : value}
+                      tick={{
+                        fill: 'rgb(0, 255, 255)',
+                        fontSize: 12,
+                        fontFamily: 'Rajdhani, sans-serif'
+                      }}
+                      tickFormatter={(value) => value.length > 15 ? value.substring(0, 15) + '...' : value}
                     />
                     <PolarRadiusAxis
                       angle={90}
