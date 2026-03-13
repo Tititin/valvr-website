@@ -1,0 +1,147 @@
+/* TRON Legacy Theme Variables */
+:root {
+  --tron-cyan: #00ffff;
+  --tron-blue: #00d4ff;
+  --tron-dark-blue: #002a44;
+  --tron-orange: #ff6b00;
+  --tron-black: #000000;
+  --tron-grid: rgba(0, 255, 255, 0.15);
+  --tron-glow: 0 0 15px var(--tron-cyan), 0 0 30px var(--tron-cyan), 0 0 45px var(--tron-cyan);
+  --tron-glow-orange: 0 0 10px var(--tron-orange), 0 0 20px var(--tron-orange);
+}
+
+/* Grid Background */
+.tron-grid {
+  background-image:
+    linear-gradient(var(--tron-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tron-grid) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: relative;
+}
+
+.tron-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* Neon Glow Effects */
+.neon-text {
+  color: var(--tron-cyan);
+  text-shadow: var(--tron-glow);
+}
+
+.neon-border {
+  border: 1px solid var(--tron-cyan);
+  box-shadow:
+    inset 0 0 15px rgba(0, 255, 255, 0.5),
+    0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.neon-border-orange {
+  border: 1px solid var(--tron-orange);
+  box-shadow:
+    inset 0 0 10px rgba(255, 107, 0, 0.4),
+    0 0 10px rgba(255, 107, 0, 0.4);
+}
+
+.neon-line {
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--tron-cyan) 50%,
+    transparent 100%);
+  height: 1px;
+  box-shadow: 0 0 15px var(--tron-cyan), 0 0 30px var(--tron-cyan);
+}
+
+/* Glowing Button */
+.tron-button {
+  background: transparent;
+  border: 2px solid var(--tron-cyan);
+  color: var(--tron-cyan);
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 50%,
+    70% 100%,
+    30% 100%,
+    0% 50%
+  );
+  padding: 1rem 3rem;
+  font-weight: 600;
+}
+
+.tron-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 255, 0.15);
+  transition: left 0.3s ease;
+}
+
+.tron-button:hover {
+  box-shadow:
+    inset 0 0 25px rgba(0, 255, 255, 0.6),
+    0 0 25px rgba(0, 255, 255, 0.6),
+    0 0 50px rgba(0, 255, 255, 0.4);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.tron-button:hover::before {
+  left: 100%;
+}
+
+/* Scan Line Animation */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    var(--tron-cyan) 50%,
+    transparent 100%);
+  box-shadow: var(--tron-glow);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.3;
+}
+
+/* Card with glass effect */
+.tron-card {
+  background: rgba(0, 42, 68, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  box-shadow:
+    inset 0 0 25px rgba(0, 255, 255, 0.15),
+    0 0 25px rgba(0, 255, 255, 0.25);
+}
+
+.tron-card:hover {
+  border-color: var(--tron-cyan);
+  box-shadow:
+    inset 0 0 35px rgba(0, 255, 255, 0.25),
+    0 0 35px rgba(0, 255, 255, 0.5);
+}
