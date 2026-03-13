@@ -20,14 +20,14 @@ const AnimatedTick = (props: any) => {
         </clipPath>
       </defs>
       <text
-        x={x}
+        x={isLong ? x + 50 : x} // Positionner à droite pour les longs textes
         y={y}
         textAnchor={textAnchor}
         dominantBaseline={dominantBaseline}
         fill="rgb(0, 255, 255)"
         fontSize={12}
         fontFamily="Rajdhani, sans-serif"
-        clipPath={`url(#${clipId})`}
+        clipPath={isLong ? `url(#${clipId})` : undefined}
       >
         {displayText}
         {isLong && (
