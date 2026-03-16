@@ -14,12 +14,12 @@ const projects = [
     demo: 'https://github.com/Tititin/vegetable-deck-builder/releases/tag/v0.4.0'
   },
   {
-    title: 'MATRICE 3D',
-    description: 'Environnement 3D interactif avec navigation en temps réel',
+    title: 'ADVENT OF CODE',
+    description: 'Participation annuelle à l\'événement de programmation Advent of Code, résolvant des puzzles variés en C++',
     image: 'https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjB3b3Jrc3BhY2UlMjBkZXZlbG9wZXJ8ZW58MXx8fHwxNzczMjU3MTkyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Node.js', 'WebGL', 'MongoDB'],
-    github: '#',
-    demo: '#'
+    tags: ['C++', 'Algorithm', 'Git'],
+    github: 'https://github.com/Tititin/AdventOfCode',
+    demo: 'https://adventofcode.com/'
   },
   {
     title: 'INTERFACE CYBER',
