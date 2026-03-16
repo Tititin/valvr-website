@@ -22,14 +22,6 @@ const projects = [
     github: 'https://github.com/Tititin/AdventOfCode',
     demo: 'https://adventofcode.com/',
     linkText: 'Site officiel'
-  },
-  {
-    title: 'INTERFACE CYBER',
-    description: 'Dashboard futuriste avec visualisation de données en temps réel',
-    image: 'https://images.unsplash.com/photo-1677439283162-79114d6c84c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzczMjI1NjYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Vue.js', 'D3.js', 'GraphQL'],
-    github: '#',
-    demo: '#'
   }
 ];
 
