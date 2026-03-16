@@ -11,7 +11,8 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwcmVhbGl0eSUyMGFic3RyYWN0fGVufDF8fHx8MTc3MzMzMTU0Mnww&ixlib=rb-4.1.0&q=80&w=1080',
     tags: ['C++', 'SFML', 'VS Code'],
     github: 'https://github.com/Tititin/vegetable-deck-builder',
-    demo: 'https://github.com/Tititin/vegetable-deck-builder/releases/tag/v0.4.0'
+    demo: 'https://github.com/Tititin/vegetable-deck-builder/releases/tag/v0.4.0',
+    linkText: 'Démo'
   },
   {
     title: 'ADVENT OF CODE',
@@ -19,7 +20,8 @@ const projects = [
     image: 'https://cdn.thenewstack.io/media/2021/12/521cd034-advent-of-code-2021.jpg',
     tags: ['C++', 'Algorithm', 'Git'],
     github: 'https://github.com/Tititin/AdventOfCode',
-    demo: 'https://adventofcode.com/'
+    demo: 'https://adventofcode.com/',
+    linkText: 'Site officiel'
   },
   {
     title: 'INTERFACE CYBER',
@@ -103,7 +105,7 @@ export function Projects() {
                     style={{ color: 'var(--tron-cyan)' }}
                   >
                     <ExternalLink className="w-5 h-5" />
-                    <span>Demo</span>
+                    <span>{project.linkText}</span>
                   </a>
                 </div>
               </div>
