@@ -6,28 +6,22 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const projects = [
   {
-    title: 'VR EXPERIENCE',
-    description: 'Application immersive en réalité virtuelle utilisant Three.js et WebXR',
-    image: 'https://images.unsplash.com/photo-1592478411213-6153e4ebc696?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwcmVhbGl0eSUyMGFic3RyYWN0fGVufDF8fHx8MTc3MzMzMTU0Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Three.js', 'WebXR', 'React'],
-    github: '#',
-    demo: '#'
+    title: 'VEGETABLE DECK BUILDER',
+    description: 'Jeu de cartes où il faut construire un deck de légumes pour se débarrasser d\'artichauts',
+    image: '/artichoke.jpeg',
+    tags: ['C++', 'SFML', 'VS Code'],
+    github: 'https://github.com/Tititin/vegetable-deck-builder',
+    demo: 'https://github.com/Tititin/vegetable-deck-builder/releases/tag/v0.4.0',
+    linkText: 'Démo'
   },
   {
-    title: 'MATRICE 3D',
-    description: 'Environnement 3D interactif avec navigation en temps réel',
-    image: 'https://images.unsplash.com/photo-1566915896913-549d796d2166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjB3b3Jrc3BhY2UlMjBkZXZlbG9wZXJ8ZW58MXx8fHwxNzczMjU3MTkyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Node.js', 'WebGL', 'MongoDB'],
-    github: '#',
-    demo: '#'
-  },
-  {
-    title: 'INTERFACE CYBER',
-    description: 'Dashboard futuriste avec visualisation de données en temps réel',
-    image: 'https://images.unsplash.com/photo-1677439283162-79114d6c84c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ258ZW58MXx8fHwxNzczMjI1NjYwfDA&ixlib=rb-4.1.0&q=80&w=1080',
-    tags: ['Vue.js', 'D3.js', 'GraphQL'],
-    github: '#',
-    demo: '#'
+    title: 'ADVENT OF CODE',
+    description: 'Participation annuelle à l\'événement de programmation Advent of Code, résolvant des puzzles variés en langage libre',
+    image: 'https://cdn.thenewstack.io/media/2021/12/521cd034-advent-of-code-2021.jpg',
+    tags: ['C++', 'Algorithm', 'Git'],
+    github: 'https://github.com/Tititin/AdventOfCode',
+    demo: 'https://adventofcode.com/',
+    linkText: 'Site officiel'
   }
 ];
 
@@ -45,7 +39,7 @@ export function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-4 neon-text tracking-wider">
-            PROJETS (WIP)
+            PROJETS
           </h2>
           <div className="neon-line max-w-xs mx-auto" />
         </motion.div>
@@ -103,7 +97,7 @@ export function Projects() {
                     style={{ color: 'var(--tron-cyan)' }}
                   >
                     <ExternalLink className="w-5 h-5" />
-                    <span>Demo</span>
+                    <span>{project.linkText}</span>
                   </a>
                 </div>
               </div>
