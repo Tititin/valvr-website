@@ -106,7 +106,7 @@ export function Contact() {
         >
           <div className="neon-line max-w-md mx-auto mb-6" />
           <p style={{ color: 'rgba(0, 217, 255, 0.5)' }}>
-            © 2026 Val'VR. Tous droits réservés. Version du site : v0.4.0-preview
+            © 2026 Val'VR. Tous droits réservés. Version du site : v0.4.0
           </p>
         </motion.div>
       </div>
