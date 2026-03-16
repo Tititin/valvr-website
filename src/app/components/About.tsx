@@ -35,7 +35,7 @@ export function About() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-4 neon-text tracking-wider">
-            À PROPOS (WIP)
+            À PROPOS
           </h2>
           <div className="neon-line max-w-xs mx-auto" />
         </motion.div>
@@ -74,8 +74,9 @@ export function About() {
             Nantais et fier de l'être, j'ai du Petit Beurre dans les veines et les bords de l'Erdre dans le coeur.
           </p>
           <p className="text-lg" style={{ color: 'rgba(0, 217, 255, 0.8)' }}>
-            Mon approche combine code propre, design innovant et une compréhension profonde
-            de l'expérience utilisateur pour livrer des solutions qui ne sont pas seulement fonctionnelles—elles sont exceptionnelles.
+            Mon approche combine apprentissage par le jeu, rigueur technique et compréhension des environnements clients
+            pour créer des solutions innovantes, efficaces et robustes. Je suis toujours à la recherche de nouveaux défis pour 
+            continuer à apprendre et à m'amuser en même temps.
           </p>
         </motion.div>
       </div>
