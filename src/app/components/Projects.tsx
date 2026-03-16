@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'VEGETABLE DECK BUILDER',
     description: 'Jeu de cartes où il faut construire un deck de légumes pour se débarrasser d\'artichauts',
-    image: '/public/artichoke.jpeg',
+    image: 'assets/public/artichoke.jpeg',
     tags: ['C++', 'SFML', 'VS Code'],
     github: 'https://github.com/Tititin/vegetable-deck-builder',
     demo: 'https://github.com/Tititin/vegetable-deck-builder/releases/tag/v0.4.0',
