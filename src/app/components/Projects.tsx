@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'ADVENT OF CODE',
-    description: 'Participation annuelle à l\'événement de programmation Advent of Code, résolvant des puzzles variés en C++',
+    description: 'Participation annuelle à l\'événement de programmation Advent of Code, résolvant des puzzles variés en langage libre',
     image: 'https://cdn.thenewstack.io/media/2021/12/521cd034-advent-of-code-2021.jpg',
     tags: ['C++', 'Algorithm', 'Git'],
     github: 'https://github.com/Tititin/AdventOfCode',
