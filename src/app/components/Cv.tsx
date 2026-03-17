@@ -4,40 +4,56 @@ import { useInView } from 'motion/react';
 
 const cvSections = [
   {
+    id: 'informations',
+    title: 'INFORMATIONS',
+    lines: ['Né le : 09.05.1997 à Nantes', 'Permis : Oui', 'Voiture : Oui', 'Ville : Nantes'],
+    angle: -130,
+    distance: 240,
+    align: 'right'
+  },
+  {
     id: 'contact',
     title: 'CONTACT',
-    lines: ['Mobile : 06.75.55.90.46', 'Mail : val.rouquet@gmail.com', 'Ville : Nantes'],
+    lines: ['Mobile : 06.75.55.90.46', 'Mail : val.rouquet@gmail.com'],
     angle: -90,
-    distance: 220
+    distance: 210,
+    align: 'center'
   },
   {
     id: 'experiences',
     title: 'EXPÉRIENCES PRO',
     lines: [
-      'TOTEM ENTERTAINMENT (10.2019 - 02.2021) : UE4/C++',
-      'MISCIBLE.IO (03.2019 - 09.2019) : VR/AR Unity 3D Oculus',
-      'UNVR STUDIO (09.2018 - 12.2018) : Unreal Engine 4 Oculus Rift'
+      'TOTEM ENTERTAINMENT 10.2019 - 02.2021',
+      'MISCIBLE.IO 03.2019 - 09.2019',
+      'UNVR STUDIO 09.2018 - 12.2018'
     ],
-    angle: -20,
-    distance: 255
-  },
-  {
-    id: 'formation',
-    title: 'FORMATION',
-    lines: [
-      '2014-2019 : EPITECH - Expert TC',
-      '2017-2018 : Keimyung University (Corée du Sud)',
-      'Spécialisation jeux vidéo & réalité virtuelle'
-    ],
-    angle: 160,
-    distance: 240
+    angle: -30,
+    distance: 260,
+    align: 'left'
   },
   {
     id: 'competences',
     title: 'COMPÉTENCES',
-    lines: ['VR/AR', 'Unity3D', 'Unreal Engine', 'C++ / C# / DevOps', 'Shader, 3D & UX futuriste'],
+    lines: ['Unreal Engine', 'Unity 3D', 'C++', 'C#', 'Blueprint', 'VR/AR'],
+    angle: 170,
+    distance: 240,
+    align: 'left'
+  },
+  {
+    id: 'autres',
+    title: 'AUTRES',
+    lines: ['Anglais : Professionnel', 'Coréen : Notions', 'Centres d’intérêt : Natation & Voyages'],
+    angle: 60,
+    distance: 250,
+    align: 'left'
+  },
+  {
+    id: 'formation',
+    title: 'FORMATION',
+    lines: ['2014-2019 : EPITECH', '2017.2018 : Keimyung University, Corée du Sud', 'Expert en Technologies du Numérique'],
     angle: 110,
-    distance: 245
+    distance: 245,
+    align: 'right'
   }
 ];
 
@@ -87,6 +103,8 @@ export function Cv() {
             const x = Math.cos(angleRad) * section.distance;
             const y = Math.sin(angleRad) * section.distance;
 
+            const cardAlignment = section.align === 'right' ? 'text-right' : section.align === 'center' ? 'text-center' : 'text-left';
+
             return (
               <div key={section.id}>
                 <motion.div
@@ -97,18 +115,18 @@ export function Cv() {
                   }}
                   initial={{ width: 0, opacity: 0 }}
                   animate={isInView ? { width: section.distance, opacity: 1 } : {}}
-                  transition={{ delay: 0.35 + idx * 0.15, duration: 0.7, ease: 'easeOut' }}
+                  transition={{ delay: 0.45 + idx * 0.16, duration: 0.8, ease: 'easeOut' }}
                 />
 
                 <motion.div
-                  className="absolute p-4 rounded-xl neon-border bg-black/60 border-cyan-400 shadow-cyan-900 text-left max-w-xs"
+                  className={`absolute p-5 rounded-xl neon-border bg-black/70 border-cyan-400 shadow-2xl shadow-cyan-900 max-w-[270px] ${cardAlignment}`}
                   style={{ left: `calc(50% + ${x}px)`, top: `calc(50% + ${y}px)`, transform: 'translate(-50%, -50%)' }}
-                  initial={{ opacity: 0, y: 10, scale: 0.88 }}
+                  initial={{ opacity: 0, y: 14, scale: 0.86 }}
                   animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                  transition={{ delay: 0.6 + idx * 0.2, duration: 0.6, ease: 'easeOut' }}
+                  transition={{ delay: 0.82 + idx * 0.18, duration: 0.7, ease: 'easeOut' }}
                 >
                   <h3 className="text-lg font-bold neon-text mb-2">{section.title}</h3>
-                  <ul className="text-sm text-cyan-100 leading-relaxed">
+                  <ul className="text-sm text-cyan-100 leading-snug">
                     {section.lines.map((line, lineIndex) => (
                       <li key={`${section.id}-${lineIndex}`} className="mb-1">{line}</li>
                     ))}
